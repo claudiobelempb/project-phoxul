@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 *,
 *::before,
@@ -10,11 +10,11 @@
 
 :root {
   font-size: 62.5%;
-
   /*Custom Properties*/
   --max-width: 1100px;
-  --b-radius: 12px;
-  --ffamily-titillium: 'Titillium Web', sans-serif;
+  --radius: 0.5rem;
+  --jakarta: "Plus Jakarta Sans", sans-serif;
+  --oswald: "Oswald", sans-serif;
 
   /*Custom Colors*/
   --red-400: hsla(330, 100%, 23%, 0.55);
@@ -29,50 +29,54 @@
   --orange-500: #ff724c;
   --orange-600: rgba(255, 115, 76, 0.85);
 
-  --gray-400: hsla(39, 56%, 92%, 0.6);
-  --gray-500: #f6eedf;
-  --gray-600: hsla(39, 56%, 92%, 0.85);
+  --gray-100: hsl(0, 0%, 100%);
+  --gray-400: hsl(0, 1%, 50%);
+  --gray-500: hsl(0, 0%, 11%);
+  --gray-600: hsla(0, 0%, 11%, 0.4);
+  --gray-700: hsl(0, 0%, 17%);
 
   /*Custom Transform Duration*/
   --duration: 0.3s;
 
-  /*Custom Font Size*/
-  --fsd-xl: calc(2rem + 2vw);
-  --fsd-large: calc(4rem + 4vw);
-  --fsd-medium: calc(2rem + 2vw);
-  --fsd-small: calc(0.5rem + 1vw);
-  --fsd-smallx1: calc(1rem + 2vw);
-  --fsd-smallx2: calc(2.5rem + 1.5vw);
-  --fsd-xx: calc(4rem + 4vw);
-  --fsd-mdx: calc(1.5rem + 0.5vw);
-  --fsd-sm: calc(0.5rem + 1vw);
-  --lg: calc(2rem + 2vw);
-  --lgx2: calc(4rem + 4vw);
-  --md: calc(1rem + 1vw);
-  --sm: calc(0.5rem + 1vw);
+  /*Custom Font Size  1500 / 100 x 12*/
 
-  /*Custom Padding*/
-  --ps-xl: 8vh 3vw;
-  --px2: 2vh 2vw 6vw calc(2rem + 2vw);
-  --pdx1: calc(1rem + 2vw);
+  --large-vd: calc(2rem + 12vh);
+  --large-hd: calc(2rem + 12vw);
+  --large: calc(2rem + 3vw);
+  --custom-largex: 4rem;
+  --custom-large: 3.5rem;
+
+  --medium-hd: calc(1rem+ 2vw);
+  --medium-vd: calc(1rem + 2vh);
+  --medium: 2rem;
+  --custom-medium: 2.5rem;
+
+  --custom-vd: calc(1rem + 4vh);
+  --custom-hd: calc(1rem + 4vw);
+
+  --small-hd: calc(1rem + 1vw);
+  --small-vd: calc(1rem + 1vh);
+  --small: 1rem;
+  --custom-small: 1.5rem;
+
+
+
 }
 
 body {
-  font-family: var(--ffamily-titillium);
-  line-height: 1.7;
-  background-color: var(--gray-500);
+  font-family: var(--jakarta);
+  font-size: var(--static-15);
+  line-height: 1.6;
+  background-color: var(--gray-100);
+  color: var(--gray-500);
 }
 
-a:link,
-a:visited {
-  color: var(--gray-500);
+a {
   text-decoration: none;
-  font-size: var(--md);
+  border-radius: 1rem;
 }
 
 p {
-  color: white;
-  font-size: var(--md);
   font-weight: 300;
 }
 
@@ -84,15 +88,46 @@ button {
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 [disabled] {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [container-start] repeat(12, minmax(min-content, 12.5rem)) [container-end];
+  grid-template-rows: repeat(9, min-content);
+  justify-content: center;
+}
+
+.overall__layout {
+  grid-column: container-start / container-end;
+}
+
+.section__padding {
+  padding: var(--large-vd) var(--large-hd);
+}
+
+.section__title {
+  font-size: var(--large);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section__para {
+  font-size: var(--custom-small);
 }
 
 @media screen and (max-width: 1000px) {
 
   a:link,
   a:visited {
-    font-size: var(--sm);
+    border-radius: 1rem;
   }
 }

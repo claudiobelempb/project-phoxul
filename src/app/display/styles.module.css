@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  & header {
+    background-color: #2e0249;
+  }
+
+  & section {
+    background-color: #a91079;
+  }
+
+  & footer {
+    background-color: #570057;
+  }
+
+  & header,
+  & section,
+  & footer {
+    padding: 2rem;
+    color: white;
+    font-size: 2rem;
+  }
+}
