@@ -64,6 +64,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+
       <section
         id={styles.hero__container}
         className='overall__layout section__padding'
@@ -86,31 +87,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id={styles.personal__container}
         className='overall__layout section__padding'
       >
         <div className={styles.personal__content}>
           <div className={styles.personal__box}>
-            <h2>
+            <h2 className='section__title'>
               Hello, Im Martin Dow, a professional photographer based in USa
             </h2>
             {/* Personal Info Section Para  */}
-            <p>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
               labore consectetur deleniti amet id laboriosam dolor eos
               molestias, architecto blanditiis?
             </p>
             {/* Personal Info Section List  */}
             <ul>
-              <FaCheck />
-              <li>Over 7 Years of Experience</li>
+              <li>
+                <FaCheck />
+                <p className='section__para'>Over 7 Years of Experience</p>
+              </li>
 
-              <FaCheck />
-              <li>200+ Successfully Executed Projets</li>
+              <li>
+                <FaCheck />
+                <p className='section__para'>
+                  200+ Successfully Executed Projets
+                </p>
+              </li>
 
-              <FaCheck />
-              <li>Exceptional Work Quality</li>
+              <li>
+                <FaCheck />
+                <p className='section__para'>Exceptional Work Quality</p>
+              </li>
             </ul>
           </div>
           <div className={styles.personal__box}>
@@ -118,6 +128,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id={styles.sevices__container}
         className='overall__layout section__padding'
@@ -180,6 +191,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id={styles.latest__container}
         className='overall__layout section__padding'
@@ -205,6 +217,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id={styles.works__container}
         className='overall__layout section__padding'
@@ -232,6 +245,7 @@ export default function Home() {
           <Image src={ImgWork09} alt='My Works' />
         </div>
       </section>
+
       <section
         id={`${styles.parallax__container}`}
         className='overall__layout section__padding'
@@ -257,6 +271,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id={`${styles.client__container}`}
         className='overall__layout section__padding'
@@ -268,6 +283,7 @@ export default function Home() {
           <Image src={ImgContact04} alt='Icons' />
         </div>
       </section>
+
       <footer
         id={`${styles.footer__container}`}
         className='overall__layout section__padding'
