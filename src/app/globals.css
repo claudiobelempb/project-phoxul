@@ -42,6 +42,8 @@
 
   --large-vd: calc(2rem + 12vh);
   --large-hd: calc(2rem + 12vw);
+  --lg-sh: 2rem;
+  --lg-sh: 3rem;
   --large: calc(2rem + 3vw);
   --custom-largex: 4rem;
   --custom-large: 3.5rem;
@@ -59,13 +61,36 @@
   --small: 1rem;
   --custom-small: 1.5rem;
 
+  --vw1: calc(1rem + 1vw);
+  --vh1: calc(1rem + 1vh);
+  --vw2: calc(1rem+ 2vw);
+  --vh2: calc(1rem + 2vh);
+  --vw3: calc(2rem + 3vw);
+  --vh3: calc(2rem + 3vh);
+  --vh4: calc(1rem + 4vh);
+  --vw4: calc(1rem + 4vw);
+  --vh5: calc(1rem + 5vh);
+  --vw5: calc(1rem + 4vw);
+  --vh12: calc(2rem + 12vh);
+  --vw12: calc(2rem + 12vw);
 
-
+  --s1: 1rem;
+  --s15: 1.5rem;
+  --s2: 2rem;
+  --s25: 2.5rem;
+  --s3: 3rem;
+  --s35: 3.5rem;
+  --s4: 4rem;
+  --s45: 4.5rem;
+  --s5: 5rem;
+  --s55: 5.5rem;
+  --s6: 6rem;
+  --s65: 6.5rem;
 }
 
 body {
   font-family: var(--jakarta);
-  font-size: var(--static-15);
+  font-size: var(--s15);
   line-height: 1.6;
   background-color: var(--gray-100);
   color: var(--gray-500);
@@ -73,7 +98,7 @@ body {
 
 a {
   text-decoration: none;
-  border-radius: 1rem;
+  border-radius: var(--s1);
 }
 
 p {
