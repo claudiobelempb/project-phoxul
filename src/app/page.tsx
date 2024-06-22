@@ -306,10 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id={`${styles.client__container}`}
-        className='overall__layout section__padding'
-      >
+      <section id={`${styles.client__container}`} className='overall__layout'>
         <div className={`${styles.client__content}`}>
           <Image src={ImgContact01} alt='Icons' />
           <Image src={ImgContact02} alt='Icons' />

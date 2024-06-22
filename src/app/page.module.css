@@ -580,8 +580,17 @@
 }
 
 #client__container {
+  background-color: var(--gray-500);
+
   .client__content {
-    .client__box {}
+    display: flex;
+    justify-content: space-around;
+    height: calc(2rem + 5vw);
+
+    & img {
+      width: 15rem;
+
+    }
   }
 }
 
