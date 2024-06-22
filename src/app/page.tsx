@@ -134,17 +134,18 @@ export default function Home() {
         className='overall__layout section__padding'
       >
         <div className={styles.sevices__content}>
-          <h2>My Services</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Laboriosam, ut. Commodi eius repudiandae laboriosam voluptatibus?
+          <h2 className='section__title'>My Services</h2>
+          <p className='section__para'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.Laboriosam,
+            ut.
+            <span>Commodi eius repudiandae laboriosam voluptatibus?</span>
           </p>
         </div>
         <div className={styles.sevices__content}>
           <div className={styles.sevices__box}>
             <FaCamera />
             <h3>Photography</h3>
-            <p>
+            <p className='section__para'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit,
               ipsum.
             </p>
@@ -152,7 +153,7 @@ export default function Home() {
           <div className={styles.sevices__box}>
             <FaVideo />
             <h3>Videography</h3>
-            <p>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, rem.
             </p>
@@ -160,15 +161,15 @@ export default function Home() {
           <div className={styles.sevices__box}>
             <FaBrush />
             <h3>Photo Retouching</h3>
-            <p>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, rem.
             </p>
           </div>
           <div className={styles.sevices__box}>
             <FaCamera />
-            <h3>aerial Photography</h3>
-            <p>
+            <h3>Aerial Photography</h3>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, rem.
             </p>
@@ -176,7 +177,7 @@ export default function Home() {
           <div className={styles.sevices__box}>
             <FaLightbulb />
             <h3>Lightning Setup</h3>
-            <p>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, rem.
             </p>
@@ -184,7 +185,7 @@ export default function Home() {
           <div className={styles.sevices__box}>
             <FaRulerCombined />
             <h3>Video Color Grading</h3>
-            <p>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, rem.
             </p>
@@ -197,25 +198,29 @@ export default function Home() {
         className='overall__layout section__padding'
       >
         <div className={styles.latest__content}>
-          <h2>Latest News</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <h2 className='section__title'>Latest News</h2>
+          <p className='section__para'>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
         </div>
-        <div className={styles.latest__content}>
+        <article className={styles.latest__content}>
           <div className={styles.latest__box}>
-            <h6>Resources</h6>
+            <button>Resources</button>
             <h3>Cosina announces its fastest full-frame lens</h3>
-            News Section Sub Para
-            <p>
+
+            <p className='section__para'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               assumenda, quos nisi? ab.
             </p>
-            <Link href='#'>Read More</Link>
-            <p>20 OCT 2035</p>
+            <div>
+              <Link href='#'>Read More</Link>
+              <p className='section__para'>20 OCT 2035</p>
+            </div>
           </div>
           <div className={styles.latest__box}>
             <Image src={ImgLatest} alt='' loading='lazy' />
           </div>
-        </div>
+        </article>
       </section>
 
       <section
@@ -223,51 +228,80 @@ export default function Home() {
         className='overall__layout section__padding'
       >
         <div className={styles.works__content}>
-          <h2>My Works</h2>
+          <h2 className='section__title'>My Works</h2>
           <ul>
-            <li>all</li>
-            <li>Personal</li>
-            <li>Wedding</li>
-            <li>Event</li>
-            <li>Fashion</li>
-            <li>Product</li>
+            <li className='section__para'>all</li>
+            <li className='section__para'>Personal</li>
+            <li className='section__para'>Wedding</li>
+            <li className='section__para'>Event</li>
+            <li className='section__para'>Fashion</li>
+            <li className='section__para'>Product</li>
           </ul>
         </div>
+
         <div className={styles.works__content}>
-          <Image src={ImgWork01} alt='My Works' />
-          <Image src={ImgWork02} alt='My Works' />
-          <Image src={ImgWork03} alt='My Works' />
-          <Image src={ImgWork04} alt='My Works' />
-          <Image src={ImgWork05} alt='My Works' />
-          <Image src={ImgWork06} alt='My Works' />
-          <Image src={ImgWork07} alt='My Works' />
-          <Image src={ImgWork08} alt='My Works' />
-          <Image src={ImgWork09} alt='My Works' />
+          <figure>
+            <Image src={ImgWork01} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork02} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork03} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork04} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork05} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork06} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork07} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork08} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork09} alt='My Works' />
+          </figure>
         </div>
       </section>
 
       <section
-        id={`${styles.parallax__container}`}
+        id={`${styles.contact__container}`}
         className='overall__layout section__padding'
+        style={{
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url('${ImgHeroBg.src}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
-        <div className={`${styles.parallax__content}`}>
-          <div className={`${styles.parallax__box}`}>
-            <h2>
+        <div className={`${styles.contact__content}`}>
+          <div className={`${styles.contact__box}`}>
+            <h2 className='section__title'>
               Need help with professional photography? Lets work together!
             </h2>
             <Link href='#'>Contact Me</Link>
           </div>
-          <div className={`${styles.parallax__box}`}>
-            <p>
+          <div className={`${styles.contact__box}`}>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
               corrupti totam porro voluptas quaerat reprehenderit magni eaque
               possimus fugiat. aliquid.
             </p>
-            {/* Contact Section Testimonial Image  */}
-            <Image src={ImgTestimonial} alt='Testimonial' />
-            {/* Contact Section Testimonial Image  */}
-            <p>James Brown</p>
-            <p>CEO, ColorImage</p>
+            <div>
+              <Image src={ImgTestimonial} alt='Testimonial' />
+              <div>
+                <p>James Brown</p>
+                <p>CEO, ColorImage</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
