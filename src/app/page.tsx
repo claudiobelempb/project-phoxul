@@ -271,27 +271,37 @@ export default function Home() {
       </section>
 
       <section
-        id={`${styles.parallax__container}`}
+        id={`${styles.contact__container}`}
         className='overall__layout section__padding'
+        style={{
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url('${ImgHeroBg.src}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
-        <div className={`${styles.parallax__content}`}>
-          <div className={`${styles.parallax__box}`}>
-            <h2>
+        <div className={`${styles.contact__content}`}>
+          <div className={`${styles.contact__box}`}>
+            <h2 className='section__title'>
               Need help with professional photography? Lets work together!
             </h2>
             <Link href='#'>Contact Me</Link>
           </div>
-          <div className={`${styles.parallax__box}`}>
-            <p>
+          <div className={`${styles.contact__box}`}>
+            <p className='section__para'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
               corrupti totam porro voluptas quaerat reprehenderit magni eaque
               possimus fugiat. aliquid.
             </p>
-            {/* Contact Section Testimonial Image  */}
-            <Image src={ImgTestimonial} alt='Testimonial' />
-            {/* Contact Section Testimonial Image  */}
-            <p>James Brown</p>
-            <p>CEO, ColorImage</p>
+            <div>
+              <Image src={ImgTestimonial} alt='Testimonial' />
+              <div>
+                <p>James Brown</p>
+                <p>CEO, ColorImage</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
