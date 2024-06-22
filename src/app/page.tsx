@@ -228,26 +228,45 @@ export default function Home() {
         className='overall__layout section__padding'
       >
         <div className={styles.works__content}>
-          <h2>My Works</h2>
+          <h2 className='section__title'>My Works</h2>
           <ul>
-            <li>all</li>
-            <li>Personal</li>
-            <li>Wedding</li>
-            <li>Event</li>
-            <li>Fashion</li>
-            <li>Product</li>
+            <li className='section__para'>all</li>
+            <li className='section__para'>Personal</li>
+            <li className='section__para'>Wedding</li>
+            <li className='section__para'>Event</li>
+            <li className='section__para'>Fashion</li>
+            <li className='section__para'>Product</li>
           </ul>
         </div>
+
         <div className={styles.works__content}>
-          <Image src={ImgWork01} alt='My Works' />
-          <Image src={ImgWork02} alt='My Works' />
-          <Image src={ImgWork03} alt='My Works' />
-          <Image src={ImgWork04} alt='My Works' />
-          <Image src={ImgWork05} alt='My Works' />
-          <Image src={ImgWork06} alt='My Works' />
-          <Image src={ImgWork07} alt='My Works' />
-          <Image src={ImgWork08} alt='My Works' />
-          <Image src={ImgWork09} alt='My Works' />
+          <figure>
+            <Image src={ImgWork01} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork02} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork03} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork04} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork05} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork06} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork07} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork08} alt='My Works' />
+          </figure>
+          <figure>
+            <Image src={ImgWork09} alt='My Works' />
+          </figure>
         </div>
       </section>
 
